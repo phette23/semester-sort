@@ -1,0 +1,14 @@
+{
+  "name": "semester-sort",
+  "version": "1.0.0",
+  "description": "sorting function for semester strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "author": "phette23 <phette23@gmail.com> (http://phette.net)",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "nodeunit": "^0.9.1"
+  }
+}
