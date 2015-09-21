@@ -16,11 +16,14 @@ var order = {
 
 function parseSemStr (str) {
     // assume first matched numbers are year, matched letters are season
+    var year = str.match(/\d+/) && str.match(/\d+/)[0]
+    var season = str.match(/[a-zA-Z]+/) && str.match(/[a-zA-Z]+/)[0]
+
     return {
         // cast to integer so we can use numeric comparisons
-        year: parseInt(str.match(/\d+/)[0]),
+        year: parseInt(year),
         // all order hash keys are lowercase
-        season: str.match(/[a-zA-Z]+/)[0].toLowerCase()
+        season: season.toLowerCase()
     }
 }
 
@@ -28,13 +31,19 @@ module.exports = function (first, second) {
     var firstSemester = parseSemStr(first)
     var secondSemester = parseSemStr(second)
 
+    // if one is missing a piece or has unrecognized season string, sort it first
+    if (isNaN(firstSemester.year) || !order.hasOwnProperty(firstSemester.season)) {
+        return -1
+    } else if (isNaN(secondSemester.year) || !order.hasOwnProperty(secondSemester.season)) {
+        return 1
+    }
+
     if (firstSemester.year < secondSemester.year) {
         return -1
     } else if (secondSemester.year < firstSemester.year) {
         return 1
 
         // implies years are the same
-        // @TODO throws a reference error if season isn't in order hash
     } else if (order[firstSemester.season] < order[secondSemester.season]) {
         return -1
     } else {

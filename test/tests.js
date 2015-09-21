@@ -64,3 +64,19 @@ exports['SPYY < SUYY < FYY shorthand'] = function (test) {
 
     test.done()
 }
+
+exports['Unrecognizable season or missing year sorted to the front'] = function (test) {
+    var sorted = ['Fall 2015', 'Zot zoot zoot', 'Spring 2014'].sort(ss)
+    var correct = ['Zot zoot zoot', 'Spring 2014', 'Fall 2015']
+    sorted.forEach(function(item, index) {
+        test.strictEqual(item, correct[index])
+    })
+
+    sorted = ['Fall 2015', 'Winter', 'Spring 2014'].sort(ss)
+    correct = ['Winter', 'Spring 2014', 'Fall 2015']
+    sorted.forEach(function(item, index) {
+        test.strictEqual(item, correct[index])
+    })
+
+    test.done()
+}
