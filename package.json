@@ -4,11 +4,14 @@
   "description": "sorting function for semester strings",
   "main": "index.js",
   "scripts": {
+    "browser": "browserify -t uglifyify -r './index.js:semester-sort' > semsort.min.js",
     "test": "nodeunit test"
   },
   "author": "phette23 <phette23@gmail.com> (http://phette.net)",
   "license": "GPL-3.0",
   "devDependencies": {
-    "nodeunit": "^0.9.1"
+    "browserify": "^11.2.0",
+    "nodeunit": "^0.9.1",
+    "uglifyify": "^3.0.1"
   }
 }

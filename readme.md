@@ -16,6 +16,8 @@ var sorted = ['F15', 'Su15', 'F14', 'F13', 'SP15', 'SP13'].sort(semesterSort)
 
 Unrecognized seasons or strings missing a year component will be sorted to the front of the array.
 
+You can build a minified, browser-ready version of semester-sort with `npm run browser`, which runs index.js through [browserify](https://github.com/substack/node-browserify) and uglifyJS2.
+
 ## Development
 
 Write a test for it! The pattern should be easy enough to figure out from test/tests.js and `npm test` runs the test suite.
