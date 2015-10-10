@@ -30,11 +30,16 @@ function parseSemStr (str) {
 module.exports = function (first, second) {
     var firstSemester = parseSemStr(first)
     var secondSemester = parseSemStr(second)
+    var firstIsValid = !isNaN(firstSemester.year) && order.hasOwnProperty(firstSemester.season)
+    var secondIsValid = !isNaN(secondSemester.year) && order.hasOwnProperty(secondSemester.season)
 
-    // if one is missing a piece or has unrecognized season string, sort it first
-    if (isNaN(firstSemester.year) || !order.hasOwnProperty(firstSemester.season)) {
+    // if _both_ don't have year & season, then return default lexical sort result
+    if (!firstIsValid && !secondIsValid) {
+        return ([first, second].sort()[0] === first ? -1 : 1)
+        // if only one is missing a piece or has unrecognized season string, sort it first
+    } else if (!firstIsValid) {
         return -1
-    } else if (isNaN(secondSemester.year) || !order.hasOwnProperty(secondSemester.season)) {
+    } else if (!secondIsValid) {
         return 1
     }
 

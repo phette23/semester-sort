@@ -78,5 +78,11 @@ exports['Unrecognizable season or missing year sorted to the front'] = function 
         test.strictEqual(item, correct[index])
     })
 
+    sorted = ['Fall 2015', 'Winter', 'Spring 2014', 'Beedle Beedle Boop', 'Summer 2010'].sort(ss)
+    correct = ['Beedle Beedle Boop', 'Winter', 'Summer 2010', 'Spring 2014', 'Fall 2015']
+    sorted.forEach(function(item, index) {
+        test.strictEqual(item, correct[index])
+    })
+
     test.done()
 }
