@@ -1,6 +1,6 @@
 {
   "name": "semester-sort",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "sorting function for semester strings",
   "main": "index.js",
   "scripts": {
