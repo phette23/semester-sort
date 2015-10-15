@@ -8,6 +8,13 @@
     "test": "nodeunit test"
   },
   "author": "phette23 <phette23@gmail.com> (http://phette.net)",
+  "keywords": [
+      "semester",
+      "sort",
+      "array",
+      "term",
+      "academic calendar"
+  ],
   "license": "GPL-3.0",
   "devDependencies": {
     "browserify": "^11.2.0",
