@@ -3,6 +3,15 @@
   "version": "1.0.3",
   "description": "sorting function for semester strings",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phette23/semester-sort"
+  },
+  "bugs": {
+    "url": "https://github.com/phette23/semester-sort/issues",
+    "email": "phette23@gmail.com"
+  },
+  "homepage": "https://github.com/phette23/semester-sort#readme",
   "scripts": {
     "browser": "browserify -t uglifyify -r './index.js:semester-sort' > semsort.min.js",
     "test": "nodeunit test"
@@ -20,5 +29,9 @@
     "browserify": "^11.2.0",
     "nodeunit": "^0.9.1",
     "uglifyify": "^3.0.1"
+  },
+  "engines": {
+      "browser": "es3",
+      "node": ">=0.8"
   }
 }
