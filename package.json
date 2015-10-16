@@ -1,6 +1,6 @@
 {
   "name": "semester-sort",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "sorting function for semester strings",
   "main": "index.js",
   "repository": {
@@ -18,11 +18,11 @@
   },
   "author": "phette23 <phette23@gmail.com> (http://phette.net)",
   "keywords": [
-      "semester",
-      "sort",
-      "array",
-      "term",
-      "academic calendar"
+    "semester",
+    "sort",
+    "array",
+    "term",
+    "academic calendar"
   ],
   "license": "GPL-3.0",
   "devDependencies": {
@@ -31,7 +31,7 @@
     "uglifyify": "^3.0.1"
   },
   "engines": {
-      "browser": "es3",
-      "node": ">=0.8"
+    "browser": "es3",
+    "node": ">=0.8"
   }
 }
