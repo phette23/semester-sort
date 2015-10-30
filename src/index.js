@@ -1,4 +1,5 @@
-var order = {
+/*jshint esnext:true */
+const order = {
     'spring': 0,
     'sp': 0, // will handle a few short abbreviations
     'summer': 5,
@@ -14,10 +15,10 @@ var order = {
     'w': 15,
 }
 
-function parseSemStr (str) {
+const parseSemStr = function (str) {
     // assume first matched numbers are year, matched letters are season
-    var year = str.match(/\d+/) && str.match(/\d+/)[0]
-    var season = str.match(/[a-zA-Z]+/) && str.match(/[a-zA-Z]+/)[0]
+    let year = str.match(/\d+/) && str.match(/\d+/)[0]
+    let season = str.match(/[a-zA-Z]+/) && str.match(/[a-zA-Z]+/)[0]
 
     return {
         // cast to integer so we can use numeric comparisons
@@ -27,11 +28,13 @@ function parseSemStr (str) {
     }
 }
 
-module.exports = function (first, second) {
-    var firstSemester = parseSemStr(first)
-    var secondSemester = parseSemStr(second)
-    var firstIsValid = !isNaN(firstSemester.year) && order.hasOwnProperty(firstSemester.season)
-    var secondIsValid = !isNaN(secondSemester.year) && order.hasOwnProperty(secondSemester.season)
+// if we do `export default function (){}` it ends up assigning exports.default
+// undesirable behavior, thus why we're not using ES modules
+module.exports = function semesterSort (first, second) {
+    let firstSemester = parseSemStr(first)
+    let secondSemester = parseSemStr(second)
+    let firstIsValid = !isNaN(firstSemester.year) && order.hasOwnProperty(firstSemester.season)
+    let secondIsValid = !isNaN(secondSemester.year) && order.hasOwnProperty(secondSemester.season)
 
     // if _both_ don't have year & season, then return default lexical sort result
     if (!firstIsValid && !secondIsValid) {
