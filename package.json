@@ -15,7 +15,7 @@
   "scripts": {
     "babel": "babel src --out-dir .",
     "browser": "browserify -t uglifyify -r './index.js:semester-sort' > browser.min.js",
-    "prepublish": "npm run babel; npm run browser",
+    "pub": "npm run babel; npm run browser; npm publish",
     "test": "nodeunit test"
   },
   "author": "phette23 <phette23@gmail.com> (http://phette.net)",
