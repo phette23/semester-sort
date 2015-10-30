@@ -20,7 +20,7 @@ Unrecognized seasons or strings missing a year component will be sorted to the f
 
 Write a test for it! The pattern should be easy enough to figure out from test/tests.js and `npm test` runs the test suite.
 
-The code is written in ES6 & transpiled to ES5 via [Babel](http://babeljs.io). `npm run babel` will compile the code in the "src" directory to an index.js in the root, while you can build a minified, browser-ready version of semester-sort with `npm run browser`, which runs index.js through [browserify](https://github.com/substack/node-browserify) and uglifyJS2.
+The code is written in ES6 & transpiled to ES5 via [Babel](http://babeljs.io). `npm run babel` will compile the code in the "src" directory to an index.js in the root, while you can build a minified, browser-ready version of semester-sort with `npm run browser`, which runs index.js through [browserify](https://github.com/substack/node-browserify) and uglifyJS2, outputting a file named "browser.min.js".
 
 ## License
 

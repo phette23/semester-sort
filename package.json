@@ -14,7 +14,8 @@
   "homepage": "https://github.com/phette23/semester-sort#readme",
   "scripts": {
     "babel": "babel src --out-dir .",
-    "browser": "browserify -t uglifyify -r './index.js:semester-sort' > semsort.min.js",
+    "browser": "browserify -t uglifyify -r './index.js:semester-sort' > browser.min.js",
+    "prepublish": "npm run babel; npm run browser",
     "test": "nodeunit test"
   },
   "author": "phette23 <phette23@gmail.com> (http://phette.net)",
