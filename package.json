@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/phette23/semester-sort#readme",
   "scripts": {
-    "babel": "babel src --out-dir .",
+    "babel": "npx babel src --out-dir .",
     "browser": "browserify -t uglifyify -r './index.js:semester-sort' > browser.min.js",
     "pub": "npm run babel; npm run browser; npm publish",
     "test": "nodeunit test"
