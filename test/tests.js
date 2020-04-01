@@ -1,4 +1,4 @@
-var ss = require('../index')
+var ss = require('../src/index')
 
 exports['SEASON YYYY of different years'] = function (test) {
     var sorted = ['Fall 2016', 'Fall 2015', 'Fall 2014'].sort(ss)
