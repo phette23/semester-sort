@@ -1,6 +1,6 @@
 # Semester Sort
 
-[![Build Status](https://api.travis-ci.org/phette23/semester-sort.svg)](https://travis-ci.org/phette23/semester-sort)
+![Node.js CI](https://github.com/phette23/semester-sort/workflows/Node.js%20CI/badge.svg)
 [![NPM Version](https://img.shields.io/npm/v/semester-sort.svg?style=flat-square)](https://npmjs.org/package/semester-sort)
 
 JavaScript comparison function, for use with `Array.prototype.sort`, for sorting strings that appear to be academic semesters, e.g. "F15" or "2020 Summer". It recognizes a variety of different ways of describing semesters or quarters, including single-letter abbreviations like "F" to full seasons such as "Autumn".
