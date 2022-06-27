@@ -28,12 +28,12 @@
   ],
   "license": "GPL-3.0",
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
     "browserify": "^17.0.0",
-    "mocha": "^9.1.1",
-    "uglifyify": "^5.0"
+    "mocha": "^9.2.2",
+    "uglifyify": "^5.0.2"
   },
   "engines": {
     "browser": "es3",
