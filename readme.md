@@ -8,9 +8,9 @@ JavaScript comparison function, for use with `Array.prototype.sort`, for sorting
 ## Usage
 
 ```js
-var semesterSort = require('semester-sort')
+const semesterSort = require('semester-sort')
 
-var sorted = ['F15', 'Su15', 'F14', 'F13', 'SP15', 'SP13'].sort(semesterSort)
+let sorted = ['F15', 'Su15', 'F14', 'F13', 'SP15', 'SP13'].sort(semesterSort)
 // returns ['SP13', 'F13', 'F14', 'SP15', 'Su15', 'F15']
 ```
 
