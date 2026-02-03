@@ -28,9 +28,9 @@
   ],
   "license": "GPL-3.0",
   "devDependencies": {
-    "@babel/cli": "^7.28.3",
-    "@babel/core": "^7.28.5",
-    "@babel/preset-env": "^7.28.5",
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
     "browserify": "^17.0.1",
     "mocha": "^11.7.5",
     "uglifyify": "^5.0.2"
