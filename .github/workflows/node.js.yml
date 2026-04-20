@@ -6,8 +6,16 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**/*.js'
+      - package.json
+      - pnpm-lock.yaml
   pull_request:
     branches: [ main ]
+    paths:
+      - '**/*.js'
+      - package.json
+      - pnpm-lock.yaml
 
 jobs:
   build:
